@@ -3,6 +3,7 @@ package com.practice.fileio_project.service;
 import com.practice.fileio_project.exception.FileStorageException;
 import com.practice.fileio_project.exception.MyFileNotFoundException;
 import com.practice.fileio_project.property.FileStorageProperties;
+import com.practice.fileio_project.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -19,7 +20,6 @@ import java.nio.file.StandardCopyOption;
 
 @Service
 public class FileStorageService {
-
     private final Path fileStorageLocation;
 
     @Autowired
